@@ -1,18 +1,7 @@
-body {
-  font-family: Helvetica, sans-serif;
-}
-#masthead {
-  text-align: center;
-}
-
-.subtitle {
-  color: #474545
-}
-
-.thumbnail{
-  width: 150px;
-  height: 100px;
-}
+body {font-family: Helvetica, sans-serif;}
+.subtitle {color: #474545}
+#masthead {text-align: center;}
+.thumbnail{width: 150px; height: 100px;}
 
 /* Display article thumbnails and descriptions side by side in a grid */
 article {
