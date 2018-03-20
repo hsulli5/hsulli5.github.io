@@ -20,9 +20,6 @@ projectData[1] = {
 }
 
 for (let i=0; i < projectData.length; i++) {
-  if (projectData[i].thumb === '') {
-    console.log('No Title'
-  } else {
-    console.log(projectData[i].title)
-  }
+  createTitle (projectData[i].title)
+  createThumbnail(projectData[i].thumb, projectData[i].id)
 }
