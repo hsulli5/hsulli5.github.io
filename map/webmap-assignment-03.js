@@ -12,7 +12,7 @@ let redIcon = L.icon({
    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
  })
 
-let markerCoords = [39.295431, -76.61124]
+let markerCoords = [39.2976, 76.6156]
 let markerOptions = {icon: redIcon}
 
 let marker = L.marker(markerCoords, markerOptions).addTo(mymap)
