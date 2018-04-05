@@ -12,13 +12,19 @@ let redIcon = L.icon({
    popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
  })
 
-let markerCoords = [39.2976, 76.6156]
+let markerCoords = [39.2976, -76.6156]
 let markerOptions = {icon: redIcon}
 
 let marker = L.marker(markerCoords, markerOptions).addTo(mymap)
 
-let portcoords = [
+let portArea = [
   [39.32, -76.6056741],
   [39.26, -76.58324],
   [39.22, -76.6097514]
-].addTo(mymap);
+]
+let portStyle = {
+  color : 'purple',
+  fillColor: 'yellow'
+}
+
+let polygon = L.polygon(portArea, portStyle).addTo(mymap)
