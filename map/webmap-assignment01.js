@@ -1,4 +1,4 @@
-let mymap = L.map('webmap1').setView([39.295431, -76.61124], 13)
+let mymap = L.mymap('webmap1').setView([39.295431, -76.61124], 13)
 let basemap = 'https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 L.tileLayer(basemap).addTo(mymap)
 let marker = L.marker([39.295431, -76.61124]).addTo(mymap)
