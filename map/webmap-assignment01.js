@@ -1,15 +1,15 @@
 let mymap = L.map('webmap1').setView([39.295431, -76.61124], 13)
 let basemap = 'https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
 L.tileLayer(basemap).addTo(mymap)
-let marker = L.marker([39.295431, -76.61124]).addTo(mymap)
+let marker = L.marker([39.2976, -76.6156]).addTo(mymap)
 let polygon = L.polygon([
   [39.32, -76.6056741],
   [39.26, -76.58324],
   [39.22, -76.6097514]
 ]).addTo(mymap);
 
-myshape.bindPopup('The Washington Monument')
-mypoint.bindPopup('Port of Baltimore')
+marker.bindPopup('The Washington Monument')
+polygon.bindPopup('Port of Baltimore')
 
 mymap.on('click', function (event) {
   console.log('You clicked the map at Baltimore' + event.latlng)
