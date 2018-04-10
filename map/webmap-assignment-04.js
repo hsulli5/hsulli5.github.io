@@ -6,7 +6,7 @@ L.tileLayer(basemapURL).addTo(mymap)
 mygeoJsonStyle = function (state) {
   let age = state.properties.FEMALES
   let statecolor = 'yellow'
-  if (age<55) {statecolor = 'orange'}
+  if (age < 3132934) {statecolor = 'orange'}
   let myStyle = {
     color: statecolor,
     weight: 1,
@@ -17,8 +17,8 @@ mygeoJsonStyle = function (state) {
 
 function createPopup (state, statelayer) {
   let name = state.properties.STATE_NAME
- let age = state.properties.MED_AGE
- statelayer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
+ let females = state.properties.FEMALES
+ statelayer.bindPopup(name + 'has this many females in their population' +  females + '<br>National average: 3,132,934')
 }
 
 mygeoJsonOptions = {
