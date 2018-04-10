@@ -16,3 +16,27 @@ let myBasemaps = {
 }
 
 L.control.layers(myBasemaps).addTo(mymap)
+
+mygeoJsonStyle = function (state) {
+  let age = state.properties.FEMALES
+  let statecolor = 'yellow'
+  if (age < 3132934) {statecolor = 'orange'}
+  let myStyle = {
+    color: statecolor,
+    weight: 1,
+    fillOpacity: 0.25
+  }
+  return myStyle
+}
+
+function createPopup (state, statelayer) {
+  let name = state.properties.STATE_NAME
+ let females = state.properties.FEMALES
+ statelayer.bindPopup(name + 'has this many females in their population' +  females + '<br>National average: 3,132,934')
+}
+
+mygeoJsonOptions = {
+  style : mygeoJsonStyle,
+  onEachFeature: createPopup
+}
+L.geoJSON(stateData, mygeoJsonOptions).addTo(mymap)
