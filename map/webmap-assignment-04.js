@@ -4,7 +4,7 @@ L.tileLayer(basemapURL).addTo(mymap)
 
 
 mygeoJsonStyle = function (state) {
-  let age = state.properties.MED_AGE
+  let age = state.properties.FEMALES
   let statecolor = 'yellow'
   if (age<55) {statecolor = 'orange'}
   let myStyle = {
