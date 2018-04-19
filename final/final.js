@@ -1,4 +1,4 @@
-let mymap = L.map('webmap5').setView([41.9102415,12.3959128], 4)
+let mymap = L.map('final').setView([41.9102415,12.3959128], 10)
 let grayBasemapURL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'
 let grayBasemap = L.tileLayer(grayBasemapURL)
 grayBasemap.addTo(mymap)
@@ -18,11 +18,11 @@ let myBasemaps = {
 let orangeIcon = L.icon({
    iconUrl: 'leaf-orange.png',
    shadowUrl: 'leaf-shadow.png',
-   iconSize: [38, 95], // size of the icon
-   shadowSize: [50, 64], // size of the shadow
-   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-   shadowAnchor: [4, 62],  // the same for the shadow
-   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+   iconSize: [38, 95],
+   shadowSize: [50, 64],
+   iconAnchor: [22, 94],
+   shadowAnchor: [4, 62],
+   popupAnchor: [-3, -76]
  })
 
 let markerCoords = [
