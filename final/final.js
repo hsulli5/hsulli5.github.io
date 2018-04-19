@@ -25,15 +25,15 @@ let orangeIcon = L.icon({
    popupAnchor: [-3, -76]
  })
 
-let markerCoords = [
-  [41.8918623,12.4785579],
-  [41.8985353,12.438922],
-  [41.9029508,12.4522948],
-  [41.8907013,12.4864608]
-]
-let markerOptions = {icon: orangeIcon}
-
-let marker = L.marker(markerCoords, markerOptions).addTo(mymap)
+// let markerCoords = [
+//   [41.8918623,12.4785579],
+//   [41.8985353,12.438922],
+//   [41.9029508,12.4522948],
+//   [41.8907013,12.4864608]
+// ]
+// let markerOptions = {icon: orangeIcon}
+//
+// let marker = L.marker(markerCoords, markerOptions).addTo(mymap)
 
 let cityArea = [
   [41.9107078,12.4741692],
