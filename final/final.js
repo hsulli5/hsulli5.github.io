@@ -6,8 +6,10 @@ grayBasemap.addTo(mymap)
 let topoURL = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
 let topoBasemap = L.tileLayer(topoURL)
 
+
 let satelliteURL = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 let satelliteBasemap = L.tileLayer(satelliteURL)
+
 
 let myBasemaps = {
   'Gray': grayBasemap,
@@ -15,25 +17,34 @@ let myBasemaps = {
   'Satellite': satelliteBasemap
 }
 
-let orangeIcon = L.icon({
-   iconUrl: 'leaf-orange.png',
-   shadowUrl: 'leaf-shadow.png',
-   iconSize: [38, 95],
+L.control.layers(myBasemaps).addTo(mymap)
+
+let Icon = L.icon({
+   iconUrl: 'marker.icon.png',
+   iconSize: [32, 64],
    shadowSize: [50, 64],
    iconAnchor: [22, 94],
    shadowAnchor: [4, 62],
    popupAnchor: [-3, -76]
  })
+let markerOptions = {icon: Icon}
 
-// let markerCoords = [
-//   [41.8918623,12.4785579],
-//   [41.8985353,12.438922],
-//   [41.9029508,12.4522948],
-//   [41.8907013,12.4864608]
-// ]
-// let markerOptions = {icon: orangeIcon}
-//
-// let marker = L.marker(markerCoords, markerOptions).addTo(mymap)
+let marker1 = [41.8919, 12.4799]
+L.marker(marker1, markerOptions).addTo(mymap).bindPopup('Theatre of Marcellus')
+
+
+let marker2 = [41.9029, 12.4545]
+L.marker(marker2, markerOptions).addTo(mymap).bindPopup('Sistine Chapel')
+
+
+let marker3 = [41.8902, 12.4922]
+L.marker(marker3, markerOptions).addTo(mymap).bindPopup('Rome Colosseum')
+
+
+let marker4 = [41.8986, 12.4769]
+L.marker(marker4, markerOptions).addTo(mymap).bindPopup('Pantheon')
+
+
 
 let cityArea = [
   [41.9107078,12.4741692],
@@ -46,3 +57,4 @@ let cityStyle = {
 }
 
 let polygon = L.polygon(cityArea, cityStyle).addTo(mymap)
+polygon.bindPopup('Downtown Rome')
